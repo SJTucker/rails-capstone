@@ -26,6 +26,8 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'launchy'
+  gem 'shoulda'
 end
 
 # Use ActiveModel has_secure_password

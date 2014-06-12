@@ -11,7 +11,8 @@ feature "User signs up" do
     fill_in "Credit card", with: "1234"
     
     click_button "Sign up"
-    current_path.should == dashboard_path
+    page.should have_content "We hope you enjoy auTASTIC!"
+    page.should_not have_link("I'm Ready to TASTE!")
 
   end
 end

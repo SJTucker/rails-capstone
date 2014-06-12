@@ -1,5 +1,6 @@
 %h1 This is autTASTIC
 
-%h4 Are you prepared to enjoy a streamlined, tech-integrated dining experience?
+- unless user_signed_in?
+  %h4 Are you prepared to enjoy a streamlined, tech-integrated dining experience?
 
-= link_to "I'm Ready to TASTE!", new_user_registration_path
+  = link_to "I'm Ready to TASTE!", new_user_registration_path
