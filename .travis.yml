@@ -5,7 +5,6 @@ addons:
   postgresql: "9.3"
 before_script:
   - cp config/database.example.yml config/database.yml
-  - cp config/application.travis.yml config/application.yml
   - psql -c 'create database autastic_test;' -U postgres
 
 script: 'bundle exec rake'
