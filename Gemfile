@@ -26,8 +26,10 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'codeclimate-test-reporter', require: false
   gem 'launchy'
   gem 'shoulda'
+  gem 'simplecov', require: false
 end
 
 # Use ActiveModel has_secure_password
