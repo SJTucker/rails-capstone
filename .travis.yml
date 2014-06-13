@@ -7,4 +7,4 @@ before_script:
   - cp config/database.example.yml config/database.yml
   - psql -c 'create database autastic_test;' -U postgres
 
-script: 'bundle exec rake'
+script: 'CODECLIMATE_REPO_TOKEN=b07f266e17c27f77795b6b90e87d76422876b696433d104d96bdb46f0d21b36d bundle exec rake'
