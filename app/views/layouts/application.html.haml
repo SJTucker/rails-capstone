@@ -1,4 +1,4 @@
-\!!!
+!!!
 %html
   %head
     %title AuTASTIC
@@ -7,6 +7,11 @@
     = csrf_meta_tags
   %body
     %header
+      %ul.devise_navigation
+        -if user_signed_in?
+          %li= link_to 'Sign out', destroy_user_session_path, method: 'delete'
+        -else
+          %li= link_to 'Sign in', new_user_session_path
       %p This is auTASTIC
 
     .alert= alert
