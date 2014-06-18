@@ -4,6 +4,7 @@
     %title AuTASTIC
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag "vendor/modernizr"
     = csrf_meta_tags
   %body
     %header
@@ -17,3 +18,4 @@
     .alert= alert
     .notice= notice
     = yield
+    = javascript_include_tag "vendor/modernizr"

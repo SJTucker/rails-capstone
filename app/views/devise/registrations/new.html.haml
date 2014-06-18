@@ -1,13 +1,21 @@
+
 -if resource.errors
   .alert Your account could not be created.
 
 %h2 Sign up
-= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = f.input :email, autofocus: true, :input_html => {:style => 'width: 150px'}
-  = f.input :name, :input_html => {:style => 'width: 150px'}
-  = f.input :password, :input_html => {:style => 'width: 150px'}
-  = f.input :password_confirmation, :input_html => {:style => 'width: 150px'}
-  = f.input :phone_number, :input_html => {:style => 'width: 150px'}
-  = f.input :credit_card, :input_html => {:style => 'width: 150px'}
-  = f.button :submit, "Sign up"
+#sign-up
+  = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    %fieldset
+      %legend Registration
+      .spacer-column
+        &nbsp;
+      .left-column
+        = f.input :email, autofocus: true, :input_html => {:style => 'width: 150px'}
+        = f.input :name, :input_html => {:style => 'width: 150px'}
+        = f.input :password, :input_html => {:style => 'width: 150px'}
+      .right-column
+        = f.input :password_confirmation, :input_html => {:style => 'width: 150px'}
+        = f.input :phone_number, :input_html => {:style => 'width: 150px'}
+        = f.input :credit_card, :input_html => {:style => 'width: 150px'}
+        = f.button :submit, "Sign up"
 = render "devise/shared/links"

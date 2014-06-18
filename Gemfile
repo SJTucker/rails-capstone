@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
-gem 'zurb-foundation'
+gem 'foundation-rails'
 gem 'simple_form'
 gem 'rails', '4.1.1'
 gem 'pg'
