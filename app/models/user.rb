@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
          :rememberable, :trackable, :validatable
 
   validates :email, uniqueness: true
+  has_many :ordered_items
 end

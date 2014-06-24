@@ -1,0 +1,9 @@
+%h1 Orders
+.orders
+  - @ordered_items.each do |ordered_item|
+    .order.row
+      .name.small-4.columns
+        = ordered_item.menu_item.name
+      .customer.small-4.columns
+        = ordered_item.user.name
+

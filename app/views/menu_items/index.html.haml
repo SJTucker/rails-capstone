@@ -1,0 +1,14 @@
+%h1 Azzbergio's Menu
+.menu_items
+  - @menu_items.each do |menu_item|
+    = simple_form_for(OrderedItem.new(menu_item: menu_item)) do |f|
+      = f.hidden_field :menu_item_id
+      .menu_item.row
+        .name.small-3.columns
+          = menu_item.name
+        .price.small-2.columns
+          = menu_item.price
+        .description.small-5.columns
+          = menu_item.description
+        .small-2.columns
+          = f.button :submit, 'Order Item'
