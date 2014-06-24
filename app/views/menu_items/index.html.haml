@@ -1,4 +1,4 @@
-%h1 Azzbergio's Menu
+%h1 Azzbergio Ristorante Menu
 .menu_items
   - @menu_items.each do |menu_item|
     = simple_form_for(OrderedItem.new(menu_item: menu_item)) do |f|
@@ -11,4 +11,4 @@
         .description.small-5.columns
           = menu_item.description
         .small-2.columns
-          = f.button :submit, 'Order Item'
+          = f.submit "Order", class: "button button-3d-royal button-rounded"

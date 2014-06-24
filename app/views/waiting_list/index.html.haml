@@ -1,0 +1,4 @@
+%h1 Waiting List
+.new_waiting_customer
+  = simple_form_for(WaitingList.new) do |f|
+    = f.input :customer_email

@@ -1,9 +1,15 @@
 %h1 Orders
-.orders
+%table.orders
+  %th Menu Item
+  %th Customer
   - @ordered_items.each do |ordered_item|
-    .order.row
-      .name.small-4.columns
-        = ordered_item.menu_item.name
-      .customer.small-4.columns
-        = ordered_item.user.name
+    = simple_form_for(ordered_item, :method => 'delete') do |f|
+      = f.hidden_field :ordered_item_id, :value => ordered_item.id
+      %tr.order
+        %td.name
+          = ordered_item.menu_item.name
+        %td.customer
+          = ordered_item.user.name
+        %td
+          =f.button :submit, 'X'
 

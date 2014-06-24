@@ -21,4 +21,10 @@ class OrderedItemsController < ApplicationController
   def ordered_item_params
     params.require(:ordered_item).permit(:menu_item_id)
   end
+
+  def destroy
+    @ordered_item = OrderedItem.find(params[:id])
+    @ordered_item.destroy!
+    redirect_to ordered_items_path
+  end
 end
