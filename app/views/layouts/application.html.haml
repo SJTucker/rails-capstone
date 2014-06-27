@@ -1,21 +1,33 @@
 !!!
 %html
   %head
-    %title AuTASTIC
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    %title SLF_SRV
+    = stylesheet_link_tag    'application', media: 'all'
     = stylesheet_link_tag    'buttons'
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application'
     = javascript_include_tag "vendor/modernizr"
+    = javascript_include_tag "https://js.stripe.com/v1/"
+    = tag :meta, :name => "stripe-key", :content => STRIPE_PUBLIC_KEY
     = csrf_meta_tags
   %body
     %header
-      %ul.devise_navigation
-        -if user_signed_in?
-          %li= link_to 'Sign out', destroy_user_session_path, method: 'delete'
-        -else
-          %li= link_to 'Sign in', new_user_session_path
-      %p This is auTASTIC
+      .top-bar
+        %ul.title-area
+          %li.name= link_to "SLF_SRV!", root_path, id: "logo"
+        %ul.left
+          %li
+            .alert= alert
+            .notice= notice
+        %section.top-bar-section
+          %ul.right
+            - if user_signed_in?
+              %li.email Logged in as <strong> #{current_user.email} </strong>
+            %li= link_to "Menu", menu_items_path
+            - if user_signed_in?
+              %li= link_to 'Logout', destroy_user_session_path, method: :delete
+            - else
+              %li= link_to "Sign up", new_user_registration_path
+              %li= link_to "Login", new_user_session_path
 
-    .alert= alert
-    .notice= notice
-    = yield
+    .container
+      = yield

@@ -1,21 +1,16 @@
 
--if resource.errors
-  .alert Your account could not be created.
 
-%h2 Sign up
+%h1 Sign up
 #sign-up
   = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     %fieldset
       %legend Registration
-      .spacer-column
+      = f.input :email, autofocus: true, :input_html => {:style => 'width: 2000px'}
+      = f.input :name, :input_html => {:style => 'width: 2000px'}
+      = f.input :password, :input_html => {:style => 'width: 200px'}
+      = f.input :password_confirmation, :input_html => {:style => 'width: 200px'}
+      %br
         &nbsp;
-      .left-column
-        = f.input :email, autofocus: true, :input_html => {:style => 'width: 150px'}
-        = f.input :name, :input_html => {:style => 'width: 150px'}
-        = f.input :password, :input_html => {:style => 'width: 150px'}
-      .right-column
-        = f.input :password_confirmation, :input_html => {:style => 'width: 150px'}
-        = f.input :phone_number, :input_html => {:style => 'width: 150px'}
-        = f.input :credit_card, :input_html => {:style => 'width: 150px'}
-        = f.button :submit, "Sign up"
+
+      = f.button :submit, "Go to Card Info"
 = render "devise/shared/links"

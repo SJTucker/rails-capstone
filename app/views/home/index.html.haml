@@ -1,6 +1,17 @@
-%h1 This is autTASTIC
+.spacer
+.container.row
+  .small-4.columns
+    &nbsp;
+  .small-4.columns.text-center
+    %h1
+      #first This is SLF_SRV
+    %h2= link_to "Go to the Menu", menu_items_path
 
-- unless user_signed_in?
-  %h4 Are you prepared to enjoy a streamlined, tech-integrated dining experience?
+    - unless user_signed_in?
+      %h4 Are you prepared to enjoy a streamlined, tech-integrated, fancy dining experience?
+      %p.tiny <em>You will never have to wait on your waiter again.</em>
 
-  = link_to "I'm Ready to TASTE!", new_user_registration_path
+      = link_to "I'm Ready to SLF_SRV!", new_user_registration_path
+  .small-4.columns
+.spacer
+

@@ -1,0 +1,26 @@
+.row
+  .small-6.columns
+    %h1 Add Customer
+    .new_waiting_customer
+      = simple_form_for(WaitingCustomer.new) do |f|
+        = f.input :email, :input_html => {:style => 'width: 150px'}
+        = f.input :table_number, :input_html => {:style => 'width: 150px'}
+        = f.submit "Place Customer", class: "button button-3d-royal button-rounded"
+
+  .small-6.columns
+    %h1 Waiting List
+    %table.waiting_customers
+      %th Customer
+      %th Table Number
+      - @waiting_customers.each do |waiting_customer|
+        = simple_form_for(waiting_customer, :method => 'delete') do |f|
+          = f.hidden_field :waiting_customer_id, :value => waiting_customer.id
+          %tr.waiting_customer
+            %td.name
+              = waiting_customer.user.name
+            %td.table
+              = waiting_customer.table_number
+            %td
+              =f.button :submit, 'X'
+
+

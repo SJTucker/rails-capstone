@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
 
   validates :email, uniqueness: true
   has_many :ordered_items
+  has_one :waiting_customer
+  has_one :customer
 end

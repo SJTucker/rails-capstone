@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'stripe'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
 gem 'foundation-rails'

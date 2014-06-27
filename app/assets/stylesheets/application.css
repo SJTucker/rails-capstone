@@ -13,3 +13,139 @@
  *= require_self
  *= require foundation_and_overrides
  */
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,500,300);
+body{
+  font-family: 'Roboto', sans-serif !important;
+  background-image: url('http://www.photos-public-domain.com/wp-content/uploads/2011/11/oak-wood-grain-texture-close-up.jpg') !important;
+}
+.top-bar {
+  background: $blue !important;
+
+
+  .top-bar-section{
+    .menu{
+      height: 45px !important;
+      font-family: 'Roboto', sans-serif !important;
+    }
+    ul{
+      li{
+        padding: 0;
+        font-family: 'Droid Sans', sans-serif !important;
+        a{
+          font-family: 'Droid Sans', sans-serif !important;
+          font-size: 16px;
+          text-shadow:
+          -1px -1px 0 #000,
+          1px -1px 0 #000,
+          -1px 1px 0 #000,
+          1px 1px 0 #000;
+        }
+
+        a:hover{
+          background: $red !important;
+        }
+      }
+    }
+  }
+}
+
+#logo {
+  float: left;
+  font-family: 'Droid Sans', sans-serif;
+  margin-left: .5em;
+  font-size: 1.8em;
+  color: red;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  text-shadow:
+  -2px -2px 0 black,
+  2px -2px 0 black,
+  -2px 2px 0 white,
+  2px 2px 0 white;
+}
+
+#logo:hover {
+  color: $red;
+  text-decoration: none;
+}
+
+.email {
+  color: white;
+  padding-top: 8px;
+}
+
+.left{
+  font-family: 'Roboto', sans-serif !important;
+  position: relative;
+  left: 730px;
+  color: white;
+  padding-top: 8px;
+
+}
+
+.spacer{
+  height: 150px;
+}
+
+.container{
+  background: black;
+  opacity: 0.9 !important;
+  color: white !important;
+  margin: 150px;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+h1{
+  font-family: 'Droid Sans', sans-serif !important;
+  color: lightblue !important;
+  margin: 20px;
+}
+
+#first{
+  font-family: 'Droid Sans', sans-serif !important;
+  background: black;
+  color: white !important;
+
+}
+
+#charges{
+
+  font-family: 'Droid Sans', sans-serif !important;
+  background: black;
+  color: white !important;
+}
+h4{
+  color: red !important;
+}
+
+legend{
+  color: black !important;
+  padding: 5px;
+}
+
+
+label{
+  color: white !important;
+}
+
+input{
+  width: 150px !important;
+
+}
+
+select{
+  width: 150px !important;
+}
+
+td{
+  font-family: 'Droid Sans', sans-serif !important;
+}
+
+fieldset{
+  width: 300px;
+}

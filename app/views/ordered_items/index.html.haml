@@ -1,7 +1,9 @@
-%h1 Orders
+%h1
+  #orders Orders
 %table.orders
   %th Menu Item
   %th Customer
+  %th Table Number
   - @ordered_items.each do |ordered_item|
     = simple_form_for(ordered_item, :method => 'delete') do |f|
       = f.hidden_field :ordered_item_id, :value => ordered_item.id
@@ -10,6 +12,8 @@
           = ordered_item.menu_item.name
         %td.customer
           = ordered_item.user.name
+        %td
+          = ordered_item.user.table_number
         %td
           =f.button :submit, 'X'
 
